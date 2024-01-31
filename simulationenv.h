@@ -13,13 +13,18 @@ const {return std::hash<int>{}(coords.first)^std::hash<int>{}(coords.second);}
 
 class SimulationEnv {
     public:
+    int x;
+    int y;
+
+    SimulationEnv(int xin,int yin):x(xin),y(yin){}
     std::unordered_map<std::pair<int,int>,Agent*,hashcoords> positions;
-    
-    void initprey()
+    void initprey(int numagents)
     {
-    Agent *preyptr = new Prey();
-    positions[std::make_pair(1,2)] = preyptr;
+        for(int i = 0;i<numagents;i++)
+        {
+        Agent *preyptr = new Prey();    
+        positions[std::make_pair(1,2)] = preyptr;
+        }
     }
 
-    SimulationEnv(){}
 };
