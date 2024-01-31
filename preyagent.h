@@ -10,7 +10,7 @@ class Prey: public Agent {
     int agenttype() override {return typeofagent;}
     int energy() override {return energyv;}
     int foodchain() override {return foodchainv;}
-    ~Prey();
     Prey(){}
+    ~Prey();
 
 };
