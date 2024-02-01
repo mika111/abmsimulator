@@ -17,7 +17,7 @@ class Agent {
     virtual int energy(){return -1;}
     virtual int foodchain(){return -1;}
     std::pair<int,int> returnposition()
-    {return std::make_pair(-1,-1);}
+    {return std::make_pair(positionx,positiony);}
 
     void moveagent(int dx,int dy)
     {
