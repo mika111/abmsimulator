@@ -32,9 +32,9 @@ class SimulationEnv {
     {
         for(int i = 0;i<numagents;i++)
         {
-        Arbitraryagent *ptr = new Arbitraryagent();    
-        positions[genrandcoord()] = ptr;
+        std::pair<int,int> location = genrandcoord();
+        Arbitraryagent *ptr = new Arbitraryagent(location.first,location.second);    
+        positions[location] = ptr;
         }
-    }
-
+    }    
 };

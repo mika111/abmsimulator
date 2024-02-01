@@ -7,7 +7,7 @@ int main()
 {
     SimulationEnv simenv(321,123);
     simenv.spawnagents<Prey>(100);
-    Agent *pointer = new Prey();
+    Agent *pointer = new Prey(100,100);
     std::vector<std::thread> agentthreads;
     std::vector<Agent*> agents;
     return 1;
