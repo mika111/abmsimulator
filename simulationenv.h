@@ -13,6 +13,7 @@ const {return std::hash<int>{}(coords.first)^std::hash<int>{}(coords.second);}
 
 class SimulationEnv {
     public:
+
     int x;
     int y;
     std::random_device seedsource;
